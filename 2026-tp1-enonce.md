@@ -195,7 +195,7 @@ En vous appuyant sur une seule interaction précise (un appel de méthode concre
 - Identifiez un risque potentiel lié à ce couplage (par exemple pour la compréhension du code ou son utilisation correcte).
 
 
-### 2. Coder les lacunes (10 points)
+### 2. Coder les lacunes (10 points)-------------------------------------------------------------------------------------------
 
 Complétez les méthodes marquées par des `TODO` afin de faire fonctionner la simulation et de passer les tests.
 
@@ -239,7 +239,7 @@ Soumettez uniquement les quatre fichiers Java suivants (Salle.java, SalleDExposi
 - `seDeplacer(Salle s)` : Déplacer le touriste d'une salle à l'autre en vérifiant la connexion.
 - `visiter(PlanDeVisite plan, Musee m)` : Suivre un plan de visite complet.
 
-### 3. Décrire des modifications de conception (4 points)
+### 3. Décrire des modifications de conception (4 points)----------------------------------------------------------------------------
 
 Dans cette partie, vous devez revenir sur vos analyses de la partie 1 et proposer une modification ciblée de la conception, sans écrire de code.
 

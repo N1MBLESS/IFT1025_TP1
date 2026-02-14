@@ -1,0 +1,13 @@
+#### Q4 : Proposition de modification et analyse des compromis
+
+En vous appuyant sur un point précis identifié dans la partie 1 (Q1, Q2 ou Q3) :
+
+1. décrivez une modification de conception ciblée (au niveau des classes et de leurs responsabilités) ;
+2. expliquez quel problème identifié en partie 1 cette modification cherche à adresser ;
+3. analysez un avantage concret apporté par cette modification ;
+4. analysez un inconvénient ou un compromis qu’elle introduit ;
+5. indiquez dans quel type de contexte cette modification serait pertinente, et dans quel type de contexte elle le serait moins.
+
+Les cinq points doivent porter sur la même modification.
+
+**Aucun code n’est attendu**

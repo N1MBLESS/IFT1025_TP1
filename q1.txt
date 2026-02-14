@@ -1,0 +1,6 @@
+#### Q1: Choix de conception non imposés par les exigences
+
+En vous basant uniquement sur les exigences fonctionnelles ci-dessus, identifiez un choix de conception important qui n'est pas explicitement imposé par ces exigences, mais qui aparaît dans le code:
+
+- Indiquez où il apparaît dans le code (classe, attribut, méthode)
+- Expliquez brièvement ce que ce choix implique pour le fonctionnement du système

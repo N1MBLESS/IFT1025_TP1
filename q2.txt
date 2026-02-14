@@ -1,0 +1,6 @@
+#### Q2: Hypothèses implicites et conséquences
+
+Le code repose sur plusieurs hypothèses implicites concernant l’utilisation correcte des classes (par exemple sur l’ordre des appels, l’état des objets, ou les valeurs possibles). Identifiez une hypothèse de ce type, et expliquez:
+
+- Comment elle apparaît dans le code.
+- Ce qui se passe si elle n'est pas respectée.

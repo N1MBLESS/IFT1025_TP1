@@ -1,0 +1,7 @@
+#### Q3: Cohérence et couplage entre classes
+
+En vous appuyant sur une seule interaction précise (un appel de méthode concret) entre deux classes parmi Musee, Salle, Touriste, PlanDeVisite:
+
+- Décrivez ce que chaque classe doit connaître de l’autre pour fonctionner,
+- Expliquez en quoi cette interaction est cohérente (ou non) avec le rôle de chaque classe,
+- Identifiez un risque potentiel lié à ce couplage (par exemple pour la compréhension du code ou son utilisation correcte).

@@ -35,6 +35,7 @@ public abstract class Salle {
      * @param s La salle voisine à ajouter.
      */
     public void ajouterVoisin(Salle s) {
+        //DONE
         // TODO: Implémenter l'ajout d'une connexion bidirectionnelle.
         // 1. Êtes-vous déjà voisins? Si oui, ne rien faire.
         // 2. Créer un nouveau tableau (this.voisins) avec une taille +1
@@ -47,7 +48,11 @@ public abstract class Salle {
             for (int i = 0; i < this.voisins.length; i++ ) {
                 nouveauVoisin[i] = this.voisins[i];
             }
-            
+            nouveauVoisin[this.voisins.length] = s;
+            this.voisins = nouveauVoisin;
+            if (s.estVoisin(this) == false){
+                s.ajouterVoisin(this);
+            }
         }
         
     }
@@ -59,9 +64,10 @@ public abstract class Salle {
      * @return Vrai si s est déjà un voisin.
      */
     public boolean estVoisin(Salle s) {
+        //DONE
         // TODO: Implémenter la vérification.
         // Il faut comparer (==) avec tous les voisins existants.
-        for (int i = 0; i > this.voisins.length; i++) {  //on parcour les voisin possible
+        for (int i = 0; i < this.voisins.length; i++) {  //on parcour les voisin possible
             if(this.voisins[i] == s){ // on regarde si les voisins match
                 return true;
             }

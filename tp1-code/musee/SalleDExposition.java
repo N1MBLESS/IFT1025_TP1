@@ -27,6 +27,15 @@ public class SalleDExposition extends Salle {
         // Rappel: Les tableaux en Java ont une taille fixe.
         // Il faut donc créer un nouveau tableau de taille +1 et remplacer
         // l'ancien tableau par le nouveau.
+
+        //cree nouveau tab de taille +1
+        Artefact nouveauObjets[] =  new Artefact[this.objets.length + 1];
+        for (int i = 0; i < this.objets.length; i++) {
+            nouveauObjets[i] = this.objets[i];  
+        }
+        //ajout de nouveau artefact "a" a la fin de tab
+        nouveauObjets[this.objets.length] = a; 
+        this.objets = nouveauObjets; //ancien tab = nouveau tab
     }
 
     @Override

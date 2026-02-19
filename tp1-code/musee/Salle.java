@@ -40,6 +40,16 @@ public abstract class Salle {
         // 2. Créer un nouveau tableau (this.voisins) avec une taille +1
         // 3. Remplir le nouveau tableau et y ajouter le nouveau voisin
         // 4. Assurez-vous que 's' est aussi voisine de vous.
+        if (estVoisin(s) == true){
+
+        } else {
+            Salle[] nouveauVoisin = new Salle[this.voisins.length + 1]; 
+            for (int i = 0; i < this.voisins.length; i++ ) {
+                nouveauVoisin[i] = this.voisins[i];
+            }
+            
+        }
+        
     }
 
     /**
@@ -51,6 +61,11 @@ public abstract class Salle {
     public boolean estVoisin(Salle s) {
         // TODO: Implémenter la vérification.
         // Il faut comparer (==) avec tous les voisins existants.
+        for (int i = 0; i > this.voisins.length; i++) {  //on parcour les voisin possible
+            if(this.voisins[i] == s){ // on regarde si les voisins match
+                return true;
+            }
+        }
 
         return false; // Valeur par défaut pour la compilation, à modifier
     }

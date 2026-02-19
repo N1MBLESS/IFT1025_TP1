@@ -1,6 +1,26 @@
+#### Exigences Fonctionnelles: 
+
+1.  Domaine : Un Musée composé de plusieurs Salles connectées.
+    -   Certaines salles contiennent des Artefacts.
+    -   Un musée a une seule Entrée et une seule Sortie.
+2.  Visiteurs :
+    -   Un Visiteur (Touriste) entre dans le musée, se déplace entre 
+        les salles connectées, et observe les artefacts.
+    -   Les visiteurs peuvent suivre un itinéraire précis (PlanDeVisite).
+3.  Structure de Graphe :
+    -   Le musée est un graphe où les Salles sont les nœuds et les connexions 
+        sont des arêtes bidirectionnelles.
+4.  Exemple de Simulation :
+    -   Inclure un exemple concret basé sur le plan du musée "Pointe-à-Callière".
+
 #### Q2: Hypothèses implicites et conséquences
 
-Le code repose sur plusieurs hypothèses implicites concernant l’utilisation correcte des classes (par exemple sur l’ordre des appels, l’état des objets, ou les valeurs possibles). Identifiez une hypothèse de ce type, et expliquez:
+Le code repose sur plusieurs hypothèses implicites concernant l’utilisation correcte des classes 
+(par exemple sur l’ordre des appels, l’état des objets, ou les valeurs possibles). Identifiez une 
+hypothèse de ce type, et expliquez:
 
 - Comment elle apparaît dans le code.
 - Ce qui se passe si elle n'est pas respectée.
+
+idee de hypothese:
+    - 

@@ -1,7 +1,27 @@
+#### Exigences Fonctionnelles: 
+
+1.  Domaine : Un Musée composé de plusieurs Salles connectées.
+    -   Certaines salles contiennent des Artefacts.
+    -   Un musée a une seule Entrée et une seule Sortie.
+2.  Visiteurs :
+    -   Un Visiteur (Touriste) entre dans le musée, se déplace entre les salles connectées, et observe les artefacts.
+    -   Les visiteurs peuvent suivre un itinéraire précis (PlanDeVisite).
+3.  Structure de Graphe :
+    -   Le musée est un graphe où les Salles sont les nœuds et les connexions sont des arêtes bidirectionnelles.
+4.  Exemple de Simulation :
+    -   Inclure un exemple concret basé sur le plan du musée "Pointe-à-Callière".
+
 #### Q3: Cohérence et couplage entre classes
 
-En vous appuyant sur une seule interaction précise (un appel de méthode concret) entre deux classes parmi Musee, Salle, Touriste, PlanDeVisite:
+En vous appuyant sur une seule interaction précise (un appel de méthode concret) entre deux classes parmi Musee, 
+Salle, Touriste, PlanDeVisite:
 
 - Décrivez ce que chaque classe doit connaître de l’autre pour fonctionner,
 - Expliquez en quoi cette interaction est cohérente (ou non) avec le rôle de chaque classe,
 - Identifiez un risque potentiel lié à ce couplage (par exemple pour la compréhension du code ou son utilisation correcte).
+
+idee:
+    - dans PlanDeVisite:
+        - 
+    - Touriste:
+        - 

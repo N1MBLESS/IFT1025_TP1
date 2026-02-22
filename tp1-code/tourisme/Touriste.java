@@ -28,13 +28,20 @@ public class Touriste implements Visiteur {
     @Override
     public void seDeplacer(Salle s) {
         // TODO: Gestion du déplacement unitaire.
+        
         // Est-ce que 'salleCourante' est null ?
         // Est-ce que 's' est un voisin valide de 'salleCourante'?
-        // Si c'est un voisin :
-        // Mettre à jour 'salleCourante'.
-        // Appeler 'voirArtefacts()'.
-        // Si la nouvelle salle est une Sortie, appeler 'sortir()'.
+        if (this.salleCourante != null && this.salleCourante.estVoisin(s) == true) {
+                // Si c'est un voisin :
+                // Mettre à jour 'salleCourante'.
+                this.salleCourante=s;
+                // Appeler 'voirArtefacts()'.
+                voirArtefacts();
+                // Si la nouvelle salle est une Sortie, appeler 'sortir()'.
+                if(s instanceof Sortie) { sortir();}
+        }
         // Sinon, afficher : "Impossible d'aller à S depuis A".
+        else{ System.out.println("Impossible d'aller à " + s.getNom() + " depuis " + this.salleCourante.getNom() + ".");}
     }
 
     @Override

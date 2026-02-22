@@ -28,13 +28,20 @@ public class Touriste implements Visiteur {
     @Override
     public void seDeplacer(Salle s) {
         // TODO: Gestion du déplacement unitaire.
+        
         // Est-ce que 'salleCourante' est null ?
         // Est-ce que 's' est un voisin valide de 'salleCourante'?
-        // Si c'est un voisin :
-        // Mettre à jour 'salleCourante'.
-        // Appeler 'voirArtefacts()'.
-        // Si la nouvelle salle est une Sortie, appeler 'sortir()'.
+        if (this.salleCourante != null && this.salleCourante.estVoisin(s) == true) {
+                // Si c'est un voisin :
+                // Mettre à jour 'salleCourante'.
+                this.salleCourante=s;
+                // Appeler 'voirArtefacts()'.
+                voirArtefacts();
+                // Si la nouvelle salle est une Sortie, appeler 'sortir()'.
+                if(s instanceof Sortie) { sortir();}
+        }
         // Sinon, afficher : "Impossible d'aller à S depuis A".
+        else{ System.out.println("Impossible d'aller à " + s.getNom() + " depuis " + this.salleCourante.getNom() + ".");}
     }
 
     @Override
@@ -87,14 +94,25 @@ public class Touriste implements Visiteur {
     public boolean visiter(PlanDeVisite plan, Musee m) {
         // TODO: Exécuter une visite complète.
         // Valider le plan avec 'plan.valider(m)'.
-        // Récupérer les étapes du plan.
-        // Assurer que on est dans le musée (appeler 'entrer(m)' si nécessaire).
-        // Itérer sur chaque étape du plan :
-        // a. Récupérer la salle cible via m.getSalle().
-        // b. Si nécessaire, appeler 'seDeplacer(cible)'.
-        // c. Vérifier si le déplacement a réussi avec (salleCourante == cible).
-        // On retourne true si on est sorti du musée
-
-        return false; // pour la compilation, à modifier
+        if (plan.valider(m) ==true) {
+            // Récupérer les étapes du plan.
+            String[] etapes = plan.getEtapes();
+            // Assurer que on est dans le musée (appeler 'entrer(m)' si nécessaire).
+            entrer(m);
+            // Itérer sur chaque étape du plan :
+            for (int i =0;i<etapes.length;i++) {
+                // a. Récupérer la salle cible via m.getSalle().
+                Salle cible = m.getSalle(etapes[i]);
+                // b. Si nécessaire, appeler 'seDeplacer(cible)'.`
+                seDeplacer(cible);
+                // c. Vérifier si le déplacement a réussi avec (salleCourante == cible).
+                if (salleCourante==cible) {continue;}
+            }
+            
+            // On retourne true si on est sorti du musée
+            if (salleCourante==null) {return true;}
+            else {return false;}
+        }
+        else {return false;}
     }
 }

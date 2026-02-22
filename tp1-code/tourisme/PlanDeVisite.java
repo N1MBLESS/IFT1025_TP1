@@ -49,12 +49,29 @@ public class PlanDeVisite {
      */
     public boolean valider(Musee m) {
         // TODO: Vérifier si la séquence d'étapes est physiquement possible.
+        String[] nbSalles = getEtapes();
         // Si le plan a 0 ou 1 étape, c'est valide par défaut.
-        // Sinon, itérer sur les étapes
-        // 1. Récupérer la salle 'Actuelle' (i) et 'Suivante' (i+1) via m.getSalle().
-        // 2. Vérifier si ces salles existent (!=null) et s'ils sont voisins.
-        // 3. Si tout est correct, retourner true.
+        if (nbSalles.length <=1) {return true;}
 
-        return false; // Pour la compilation, à modifier.
+        else {
+            Salle actuelle;
+            Salle suivante;
+            // Sinon, itérer sur les étapes
+            for (int i=0;i<nbSalles.length-1;i++) {
+                // 1. Récupérer la salle 'Actuelle' (i) et 'Suivante' (i+1) via m.getSalle().
+                actuelle = m.getSalle(nbSalles[i]);
+                suivante = m.getSalle(nbSalles[i+1]);
+                // 2. Vérifier si ces salles existent (!=null) et si elles sont voisines.
+                if ( (actuelle != null && suivante != null) ) {
+                    if (actuelle.estVoisin(suivante) == true) {continue;}
+                        
+                    else{return false;}
+                }
+
+                else {return false;}
+            }
+            // 3. Si tout est correct, retourner true.
+            return true;
+        }
     }
 }
